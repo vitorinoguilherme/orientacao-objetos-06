@@ -8,11 +8,15 @@ public class Filme {
     private int ano;
     private List<Papel> papeis;
 
-    public Filme(String titulo, int ano, Papel papeis){
+    public Filme(String titulo, int ano){
         this.setTitulo(titulo);
         this.setAno(ano);
         this.papeis = new ArrayList<>();
-        this.papeis.add(papeis);
+    }
+
+    public void addPapel(Ator ator, String nome, boolean protagonista) {
+        //Papel papel = new Papel(nome, true);
+        //this.papeis.add();
     }
 
     public void setTitulo(String titulo) {
@@ -29,5 +33,31 @@ public class Filme {
         this.ano = ano;
     }
 
+    public String getTitulo() {
+        return titulo;
+    }
 
+    public int getAno() {
+        return ano;
+    }
+
+    public List<Papel> getPapeis() {
+        return papeis;
+    }
+
+    public List<Ator> getAtores() {
+        List<Ator> listAtor = new ArrayList<>();
+
+        for (Papel p: papeis) {
+            listAtor.add(p.getAtor());
+        }
+
+        return listAtor;
+    }
+
+//    public Ator getProtagonista() {
+//        for (Papel p : this.getPapeis()) {
+//
+//        }
+//    }
 }
