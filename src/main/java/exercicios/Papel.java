@@ -35,4 +35,8 @@ public class Papel {
     public Filme getFilme() {
         return filme;
     }
+
+    public boolean isProtagonista() {
+        return protagonista;
+    }
 }
