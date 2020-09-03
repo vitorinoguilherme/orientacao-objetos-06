@@ -7,10 +7,9 @@ public class Ator {
     private String nome;
     private List<Papel> papeis;
 
-    public Ator(String nome, Papel papel) {
+    public Ator(String nome) {
         this.setNome(nome);
         this.papeis = new ArrayList<>();
-        this.papeis.add(papel);
     }
 
     public void setNome(String nome) {
@@ -25,7 +24,7 @@ public class Ator {
     }
 
     public void addPapeis(Papel papel) {
-        papeis.add(papel);
+        this.papeis.add(papel);
     }
 
     public List<Papel> getPapeis() {
@@ -40,6 +39,14 @@ public class Ator {
         }
 
         return listFilmes;
+    }
+
+    public boolean atuouNoAno(int ano) {
+        for (Filme f: this.getFilmes()) {
+            if (ano == f.getAno())
+                return true;
+        }
+        return false;
     }
 
 }
