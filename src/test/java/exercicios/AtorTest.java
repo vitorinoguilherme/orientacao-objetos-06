@@ -70,6 +70,13 @@ public class AtorTest {
     }
 
     @Test
+    public void metodoGetPapeis() {
+        for (Papel p: ator.getPapeis()) {
+            assertEquals("Batman", p.getNome());
+        }
+    }
+
+    @Test
     public void metodoGetFilmes() {
         Filme filme = new Filme("Batman Begins",
                 2005);
@@ -102,8 +109,9 @@ public class AtorTest {
     }
 
     @Test
-    public void metodoAtuouNoAnoValorValido() {
+    public void metodoAtuouNoAno() {
         ator.addPapeis(papel);
         assertEquals(true, ator.atuouNoAno(2008));
     }
+
 }
