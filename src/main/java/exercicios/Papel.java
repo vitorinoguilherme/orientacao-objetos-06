@@ -13,27 +13,45 @@ public class Papel {
         this.filme = filme;
     }
 
-    public void setNome(String nome) {
-        if ( nome == null ) {
-            throw new IllegalArgumentException("O nome não pode ser nulo. ");
-        }
-        this.nome = nome;
+    public Papel() {
+
     }
 
-    public void setProtagonista(boolean protagonista) {
-        this.protagonista = protagonista;
+    public void setNome(String nome) {
+        if ( nome == null ) {
+            throw new IllegalArgumentException("O Nome do papel não pode ser nulo. ");
+        }
+        this.nome = nome;
     }
 
     public String getNome() {
         return nome;
     }
 
+    public void setAtor(Ator ator) {
+        if ( ator == null ) {
+            throw new IllegalArgumentException("O Ator não pode ser nulo. ");
+        }
+        this.ator = ator;
+    }
+
     public Ator getAtor() {
-        return ator;
+        return this.ator;
+    }
+
+    public void setFilme(Filme filme) {
+        if ( filme == null ) {
+            throw new IllegalArgumentException("O Filme não pode ser nulo. ");
+        }
+        this.filme = filme;
     }
 
     public Filme getFilme() {
         return filme;
+    }
+
+    public void setProtagonista(boolean protagonista) {
+        this.protagonista = protagonista;
     }
 
     public boolean isProtagonista() {
