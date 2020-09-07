@@ -35,6 +35,24 @@ public class Main {
         }
 
         System.out.println(ator.atuouNoAno(2007));
+
+        Ator ator11 = new Ator("João");
+        Ator ator1 = new Ator("Jorge");
+        Ator ator2 = new Ator("Luany");
+        Filme filme11 = new Filme("Batman Begins", 2008);
+
+        filme11.addPapel(ator11, "Ra's al Ghul", false);
+        filme11.addPapel(ator1, "Batman", false);
+        filme11.addPapel(ator2, "Joker", true);
+
+        for (Ator t: filme11.getAtores()) {
+            System.out.println(t.getNome());
+        }
+
+        System.out.println(filme11.getProtagonista().getNome());;
+
     }
+
+
 
 }
